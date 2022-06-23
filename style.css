@@ -46,7 +46,7 @@ body {
   font-size: 13x;
   position: absolute;
   top: 60px;
-  left: 5%;
+  left: 3%;
   bottom: 0;
   width: 28%;
   background-color: var(--color-side-bar);
@@ -91,6 +91,7 @@ body {
 }
 
 .name-area{
+  line-height: 50px;
   position: absolute;
   left: 33%;
   right: 0;
@@ -140,8 +141,12 @@ h3 {
 }
 
 .social {
-  padding-left: 60px;
+  padding-top: 9px;
+  padding-left: 75px;
+  padding-bottom: 9px;
   margin-bottom: 30px;
+  word-spacing: .5px;
+  letter-spacing: 0;
   cursor: pointer;
   
 
@@ -156,11 +161,12 @@ h3 {
   position: absolute;
   top: -4px;
   left: 10px;
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
   background-size: cover !important;
 }
-.social:hover {stroke-width: 4px;
+.social:hover {
+  stroke-width: 4px;
   stroke: #966262;
   stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
 }
@@ -184,9 +190,16 @@ h3 {
   border-bottom: 1px solid #888;
 }
 .list-thing {
-  padding-left: 60px;
+  padding-top: 9px;
+  padding-left: 75px;
+  padding-bottom: 9px;
   margin-bottom: 30px;  
+  word-spacing: .5px;
+  letter-spacing: 0;
 }
+
+
+
 .list-thing:hover{
   transform:scale(1.2);
 }
@@ -201,13 +214,16 @@ p.list-thing{
   position: absolute;
   top: -4px;
   left: 10px;
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   background-size : cover;  
 }
 
 .video-game::before{
   background: url("icon/videogame.png") center no-repeat;
+}
+.blender::before{
+  background: url("icon/blender.png") center no-repeat;
 }
 .unity::before{
   background: url("icon/unity.png") center no-repeat;
@@ -227,7 +243,7 @@ p.list-thing{
   text-align: center;
 }
 .separator {
-  width: 240px;
+  width: 40%;
   height: 2px;
   background-color: #999;
 }
