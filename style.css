@@ -168,7 +168,7 @@ h3 {
   background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png") center no-repeat;
 }
 .social.facebook::before {
-  background: url("facebook.png") center no-repeat;
+  background: url("icon/facebook.png") center no-repeat;
 }
 .side-header {
   font-family: 'Open Sans';
