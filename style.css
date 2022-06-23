@@ -1,18 +1,19 @@
 :root {
   --MATH-PI: 3.1415px;
   --percent: 100;
+  --color-text-light: #999;
   --color-top-bar: #848484;
   --color-text-top-bar: #fff;
   --color-side-bar: #f7e0c1;
   --color-content-area: #ffffff;
   --color-sub-title: #dddddd;
-  --color-progress-bar-filled: #887f7d;
+  --color-progress-bar-filled: #5a5351;
   --color-progress-bar-filled-lightUp: #9a8c83;
   --color-progress-bar-background: #dddddd;
 }
 * {
   box-sizing: border-box;
-  transition: 1.5s ease;
+  transition: 0.25s ease;
   
 }
 .relative-block {
@@ -41,17 +42,24 @@ body {
   color: var(--color-text-top-bar);
 }
 
-.side-bar {
-  display: false;
+.side-bar {    
+  font-size: 13x;
   position: absolute;
   top: 60px;
   left: 5%;
-  right: false;
   bottom: 0;
   width: 28%;
   background-color: var(--color-side-bar);
   padding: 40px 30px 50px;
 }
+
+
+.contact > p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 .content-area {
   margin-left: 33%;
   width: calc(100% - 33%);
@@ -112,7 +120,7 @@ body {
   text-align: justify;
 }
 p.light {
-  color: #555;
+  color: var(--color-text-light);
 }
 h2 {
   font-family: 'Open Sans';
@@ -135,7 +143,14 @@ h3 {
   padding-left: 60px;
   margin-bottom: 30px;
   cursor: pointer;
+  
+
 }
+.social:hover { 
+  transform:scale(1.2);
+}
+
+
 .social:before {
   content: "";
   position: absolute;
@@ -171,6 +186,9 @@ h3 {
 .list-thing {
   padding-left: 60px;
   margin-bottom: 30px;  
+}
+.list-thing:hover{
+  transform:scale(1.2);
 }
 
 .list-thing::before {
