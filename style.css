@@ -1,6 +1,11 @@
 :root {
   --MATH-PI: 3.1415px;
   --percent: 100;
+  --color-top-bar: #848484;
+  --color-text-top-bar: #fff;
+  --color-side-bar: #f7e0c1;
+  --color-content-area: #ffffff;
+  --color-sub-title: #dddddd;
 }
 * {
   box-sizing: border-box;
@@ -20,32 +25,78 @@ body {
   line-height: 28px;  
   background-size: cover;
 }
+.main-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+  background-color: #fff;
+  box-shadow: 6px 10px 28px 0px rgba(0,0,0,0.4);
+}
+.top-bar {
+  height: 280px;
+  background-color: var(--color-top-bar);
+  color: var(--color-text-top-bar);
+}
 
-.mugshot-area {
+.side-bar {
   display: false;
   position: absolute;
-  margin: false;
-  top: 40;
-  left: 60;
+  top: 60px;
+  left: 5%;
   right: false;
-  bottom: false;
+  bottom: 0;
+  width: 28%;
+  background-color: var(--color-side-bar);
+  padding: 40px 30px 50px;
+}
+.content-area {
+  margin-left: 33%;
+  width: calc(100% - 33%);
+  padding: 25px 40px 50px;
+  background-color: var(--color-content-area);
+}
+
+.content-area > * {
+  margin: 0 auto 25px;
+}
+.content-area > h3 {
+  margin: 0 auto 5px;
+}
+.content-area > p.long-margin {
+  margin: 0 auto 50px;
+}
+.name {
+  position: absolute;
+  left: calc(350px + 5%);
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  text-align: center;
+  font-family: 'Raleway';
+  font-size: 58px;
+  letter-spacing: 8px;
+  font-weight: 100;
+  line-height: 60px;
+}
+.name div {
+  width: 94%;
+}
+
+.mugshot-area {
+  position: relative;
+  top: 0;
+  left: 0;
   margin: 0;
-  height:auto;
-  width: auto;
-  background-color: #88001b;
 }
 .mugshot-area > img {
   border-radius: 50%;
-  width: 220;
+  width: 100%;
   height: 220;
 }
 
 .name-area{
-  display: false;
   position: absolute;
-  margin: false;
-  top: false;
-  left: calc(350px + 5%);
+  left: 33%;
   right: 0;
   bottom: 0;
   height: 120px;
@@ -62,16 +113,12 @@ body {
 }
 
 .center {
-  display: false;
   position: absolute;
-  margin: false;
   top: 50%;
   left: 50%;
-  right: false;
-  bottom: false;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 100%;
+  width: 77%;
 }
 
 .justified {
@@ -96,48 +143,6 @@ h3 {
   line-height: 28px;
   color: #000;
 }
-.main-page {
-  width: 90%;
-  max-width: 1200px;
-  margin: 80px auto;
-  background-color: #fff;
-  box-shadow: 6px 10px 28px 0px rgba(0,0,0,0.4);
-}
-.top-bar {
-  height: 280px;
-  background-color: #88001b;
-  color: #fff;
-}
-.name {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: false;
-  left: calc(350px + 5%);
-  right: 0;
-  bottom: 0;
-  height: 120px;
-  text-align: center;
-  font-family: 'Raleway';
-  font-size: 58px;
-  letter-spacing: 8px;
-  font-weight: 100;
-  line-height: 60px;
-}
-.name div {
-  width: 94%;
-}
-.side-bar {
-  display: false;
-  position: absolute;
-  margin: false;
-  top: 280px;
-  right: false;
-  bottom: 0;
-  width: 320px;
-  background-color: #e9decd;
-  padding: 40px 30px 50px;
-}
 
 .social {
   padding-left: 60px;
@@ -146,13 +151,9 @@ h3 {
 }
 .social:before {
   content: "";
-  display: false;
   position: absolute;
-  margin: false;
   top: -4px;
   left: 10px;
-  right: false;
-  bottom: false;
   height: 35px;
   width: 35px;
   background-size: cover !important;
@@ -212,21 +213,6 @@ h3 {
 }
 
 
-.content-container {
-  margin-right: 0;
-  width: calc(100% - 320px);
-  padding: 25px 40px 50px;
-  background-color: #fef5dc;
-}
-.content-container > * {
-  margin: 0 auto 25px;
-}
-.content-container > h3 {
-  margin: 0 auto 5px;
-}
-.content-container > p.long-margin {
-  margin: 0 auto 50px;
-}
 .title {
   width: 80%;
   text-align: center;
@@ -239,9 +225,8 @@ h3 {
 .greyed {
   margin-top: 40px;
   margin-bottom: 30px;
-  background-color: #d1c0b4;
-  width: 100%;
-  max-width: 580px;
+  background-color: var(--color-sub-title);
+  width: 76%;
   text-align: center;
   font-family: 'Open Sans';
   font-size: 18px;
@@ -360,15 +345,14 @@ ul{
   stroke-width: 4px;
   stroke: #5f0718;
   stroke-linecap: round;
-  stroke-dashoffset: 0;
-  stroke-dasharray: calc(var(--MATH-PI) * 45 * 2);
+  stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
+  stroke-dasharray: calc(var(--MATH-PI) * 45 * 2 );
   transition: all 0.8s;
   transition-timing-function: cubic-bezier(0.64, 0.51, 0.16, 0.86);
 }
 .tool-list > li:hover > svg > circle.cbar {
   stroke-width: 4px;
   stroke: #966262;
-  stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
 }
 .tool-list > li > .tool-name,
 .tool-list > li > .tool-exp {
