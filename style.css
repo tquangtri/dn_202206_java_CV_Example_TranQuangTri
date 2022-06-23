@@ -66,23 +66,8 @@ body {
   margin: 0 auto 5px;
 }
 .content-area > p.long-margin {
-  margin: 0 auto 50px;
-}
-.name {
-  position: absolute;
-  left: calc(350px + 5%);
-  right: 0;
-  bottom: 0;
-  height: 120px;
-  text-align: center;
-  font-family: 'Raleway';
-  font-size: 58px;
-  letter-spacing: 8px;
-  font-weight: 100;
-  line-height: 60px;
-}
-.name div {
-  width: 94%;
+  margin: 0 auto 50px;  
+  text-align: justify;
 }
 
 .mugshot-area {
@@ -105,10 +90,9 @@ body {
   height: 120px;
   text-align: center;
   font-family: 'Raleway';
-  font-size: 58px;
-  letter-spacing: 8px;
-  font-weight: 100;
-  line-height: 60px;
+  font-size: 50px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .caps{
@@ -226,8 +210,8 @@ h3 {
   background-color: #999;
 }
 .greyed {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 5px;
+  margin-bottom: 50px;
   background-color: var(--color-sub-title);
   width: 76%;
   text-align: center;
@@ -249,7 +233,7 @@ h3 {
 }
 
 .skill-area{
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 .skill-area > span{
   margin-bottom: 5px;
